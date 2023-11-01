@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Результаты</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Результаты</h1>
+        <ul>
+            {% for solution in user_solutions %}
+                <li>{{ solution }}</li>
+            {% endfor %}
+        </ul>
+
+        <!-- Добавляем кнопку для перехода на страницу /feedback -->
+        <a href="/feedback">Оставить отзыв</a>
+    </div>
+</body>
+</html>

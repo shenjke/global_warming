@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Обратная связь</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Обратная связь</h1>
+        <p>Мы были бы рады услышать ваше мнение. Пожалуйста, оставьте обратную связь:</p>
+        
+        <form method="post" action="/submit_feedback">
+            <div class="feedback-box">
+                <label for="feedback">Ваш отзыв:</label>
+                <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+            </div>
+            <br>
+            <input type="submit" value="Отправить">
+        </form>
+        
+        <!-- Кнопка для возврата на главную страницу -->
+        <a href="/">Вернуться на главную страницу</a>
+    </div>
+</body>
+</html>
